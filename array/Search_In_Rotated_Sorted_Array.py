@@ -1,6 +1,7 @@
 """
 date: 28/2/22
 question: 33
+topic: array, binary search
 
 strategy:
 1. the first part of the question is just bs
