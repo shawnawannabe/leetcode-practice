@@ -6,7 +6,7 @@ topic: dynamic programming
 strategy:
 1. it always starts from top left corner, we can create a array based on n
 2. basically just keep adding the number of steps needed starting from the top row
-2. it is easier when refering to the picture
+3. it is easier when refering to the picture
 """
 
 
