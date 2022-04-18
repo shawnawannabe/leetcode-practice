@@ -18,16 +18,13 @@ Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "
 Output: false
 
 strategy:
-1. 
+1. the idea is to check every cell, backtrack and search the next left/right/up/down cell
+2. the conditions to be fulfilled are commented below
 """
 
 
 class Solution:
     # this bt is slightly more complicated then the other questions
-    """
-    the idea is to check every cell, backtrack and search the next left/right/up/down cell,
-    the conditions to be fulfilled are commented below
-    """
 
     def __init__(self):
         pass
