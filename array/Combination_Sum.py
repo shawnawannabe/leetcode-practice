@@ -60,4 +60,5 @@ class Solution:
 candidates = [2, 3, 6, 7]
 target = 7
 
+# Instances initialized and the function (python syntax: method) called in the same line (python syntax: expression)
 solution = Solution.combinationSum(candidates, target)

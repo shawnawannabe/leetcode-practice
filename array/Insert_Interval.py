@@ -62,5 +62,6 @@ newInterval = [2, 5]
 
 # solution = Solution.insert(intervals, newInterval)
 
+# Instances initialized at line 66 and a function (aka method) is called
 solution = Solution
 solution.insert(intervals, newInterval)
