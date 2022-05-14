@@ -58,3 +58,6 @@ target = 0
 # initialized and called in 2 seperate lines (aka expressions)
 solution = Solution()
 solution.search(nums, target)
+
+# can also be written the way below
+# solution = Solution().search(nums, target)
