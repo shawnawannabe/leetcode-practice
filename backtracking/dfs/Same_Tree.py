@@ -1,10 +1,9 @@
 """
-date: 1/5/2022
-no.: 100
-topic: depth first search, tree, binary tree
+No.: 100
+Topic: depth first search, tree, binary tree
 
 ############################################
-question:
+Question:
 Given the roots of two binary trees p and q, write a function to check if they are the same or not.
 
 Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
@@ -20,13 +19,16 @@ Input: p = [1,2,1], q = [1,1,2]
 Output: false
 ############################################
 
-strategy:
-1. use a stack to store the tuples, why tuples, binary tree has 2 node only
-2. pop the two trees and compare
-    if one of them are nodes, continue, 
-    if they are null value in either, its a false
-    else, if their value is not the same, its a false
-3. append the next node and continue the loop
+Approach:
+1. use a stack to store the [root node] in tuples, why tuples, binary tree has 2 node only
+2. loop through the stack, how:
+    pop both of the trees and compare
+        Condition A: if any of them has a value (meaning one of them is a tree), continue, 
+        Condition B: if neither of them have a value (meaning both of the inputs are not tree), its a false
+        Condition C: else, if their value is not the same (meaning the trees are not the same), its a false
+3. append the [left and right node ] (aka child node) of both the tree, how:
+    append both the right node of each Tree Node into the stack, do the same for the left, end of loop
+4. if loop ended without triggering Condition B, both nodes are the same
 """
 
 
