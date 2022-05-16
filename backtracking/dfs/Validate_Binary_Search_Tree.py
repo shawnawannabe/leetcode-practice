@@ -1,10 +1,9 @@
 """
-date: 19/4/2022
-no.: 98
-topic: depth first search, tree, binary tree
+No.: 98
+Topic: depth first search, tree, binary tree
 
 ############################################
-question:
+Question:
 Given the root of a binary tree, determine if it is a valid binary search tree (BST).
 
 A valid BST is defined as follows:
@@ -12,13 +11,19 @@ A valid BST is defined as follows:
 The left subtree of a node contains only nodes with keys less than the node's key.
 The right subtree of a node contains only nodes with keys greater than the node's key.
 Both the left and right subtrees must also be binary search trees.
+
+Example:
+Input: root = [2,1,3]
+Output: true
+
+Input: root = [5,1,4,null,null,3,6]
+Output: false
+Explanation: The root node's value is 5 but its right child's value is 4.
 ############################################
 
-strategy:
-1. initialize an array to store value of node.val
-2. loop through the node in the correct sequence (top -> left -> right), but if left node has a left node, go into the left node
-3. store the value in the array
-4. loop through the array, the array must be in ascending order
+Approach:
+1. write an inorder traversal function to traverse the node, why, inorder traversal will make a sorted array if it is a Valid Binary Search Tree
+2. loop through the array after the traversal, if it is sorted (aka ascending), it is valid 
 """
 
 # Definition for a binary tree node.
@@ -39,15 +44,15 @@ class Solution(object):
         """
 
         # Time complexity of inorder traversal is O(n)
-        # Fun fact: Inorder traversal leads to a sorted array if it is a Valid Binary Search. Tree.
+        # Fun fact: Inorder traversal leads to a sorted array if it is a Valid Binary Search Tree.
         output = []
         self.inorder(root, output)
 
         for i in range(1, len(output)):
             if output[i-1] >= output[i]:
-                # print(False)
+                print(False)
                 return False
-        # print(True)
+        print(True)
         return True
 
     def inorder(self, root, output):
