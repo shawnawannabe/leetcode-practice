@@ -49,7 +49,7 @@ Approach:
         a4. if the int of the first and second char is lower or equal to 26, go through the function once again with the first char and second char differently, why, refer to Approach 1 second eg.
         a5. else, (which means 4 of the example is not feasible, eg. string = 27), no backtracking is needed, just loop through the function with the second char only (in this case 7)
 
-Layman's term (may deleted later)
+Layman's term (may delete later)
 1. use backtracking (it's an algorithm), cause we need to go back to the previous string index to check if another combination is valid
 2. before backtracking, conditions:
     a. make sure string is not 0, if it is just return 0
