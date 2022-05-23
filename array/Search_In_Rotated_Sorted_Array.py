@@ -44,8 +44,8 @@ class Solution:
         if not nums:
             print(-1)
             return -1
-        for i in range(len(nums)):
-            if nums[i] == target:
+        for i, value in enumerate(nums):
+            if target == value:
                 print(i)
                 return i
         print(-1)
@@ -61,3 +61,11 @@ solution.search(nums, target)
 
 # can also be written the way below
 # solution = Solution().search(nums, target)
+
+# def solution(nums, target):
+#     if nums is None:
+#         return -1
+#     for i, value in enumerate(nums):
+#         if target == (value):
+#             return i
+#     return -1
