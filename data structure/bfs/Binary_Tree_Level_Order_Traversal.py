@@ -1,5 +1,5 @@
 """
-no.102
+No.102
 Topic: tree, bfs, binary tree
 
 ###############################
@@ -40,14 +40,20 @@ class TreeNode:
 class Solution:
     def levelOrder(self, root):
         if not root:
+            print([])
             return []
         ans, level = [], [root]
         while level:
             ans.append([node.val for node in level])
+
+            # for node in level:            cant really use this approach even though it look almost the same as the code above, why, run it through the compiler to find out more
+            #     ans.append([node.val])
+
             temp = []
             for node in level:
                 temp.extend([node.left, node.right])
             level = [leaf for leaf in temp if leaf]
+        print(ans)
         return ans
 
 
