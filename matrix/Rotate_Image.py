@@ -23,6 +23,8 @@ n == matrix.length == matrix[i].length
 Approach:
 1. Reverse the matrix, meaning making the first row the last row, and so on
 2. Transpose the matrix (transpose = row become column and column become row), how?, matrix[row][col] = matrix[col][row]
+    a. https://mathinsight.org/matrix_vector_multiplication#:~:text=An%20example%20help%20makes%20the%20process%20clear
+    b. https://mathinsight.org/matrix_transpose
 """
 
 
