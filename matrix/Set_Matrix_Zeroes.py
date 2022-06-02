@@ -1,24 +1,36 @@
 """
-date: 16/4/2022
-no.: 73
-topic: matrix, hash table, array
+No.: 73
+Topic: matrix, hash table, array
 
-question:
+######################################################################
+Question:
 Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 You must do it in place.
 
-example:
+Example:
 Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
 Output: [[1,0,1],[0,0,0],[1,0,1]]
 
 Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
 Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 
-strategy:
-1. go through every single element/entries, if there's a zero, mark the first row and first col as 0
-2. this is because we can use the zero marked as an indicator to which row/column we want as 0
-3. if there's a zero at the first row / col, the whole row / col would be 0 as well
-4. the only catch here is the above rule does not apply to the first row and first col, that's why we have to use an indicator
+Constraints:
+m == matrix.length
+n == matrix[0].length
+1 <= m, n <= 200
+-231 <= matrix[i][j] <= 231 - 1
+
+Follow up:
+A straightforward solution using O(mn) space is probably a bad idea.
+A simple improvement uses O(m + n) space, but still not the best solution.
+Could you devise a constant space solution?
+######################################################################
+
+Approach:
+1. Go through every single element/entries, if there's a zero, mark the first row and first col as 0
+2. This is because we can use the zero marked as an indicator to which row/column we want as 0
+3. If there's a zero at the first row / col, the whole row / col would be 0 as well
+4. The only catch here is the above rule does not apply to the first row and first col, that's why we have to use an indicator
 """
 
 
@@ -59,6 +71,8 @@ class Solution:
         if first_col_has_zero:
             for row in range(m):
                 matrix[row][0] = 0
+
+        print(matrix)
 
 
 matrix = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]
